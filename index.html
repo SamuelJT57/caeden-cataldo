@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caeden Cataldo - Home</title>
     <style>
-
-html {
-    scroll-behavior: smooth;
-}
+        html {
+            scroll-behavior: smooth;
+        }
         /* Base Reset */
         * {
             margin: 0;
@@ -70,7 +69,7 @@ html {
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('your-image.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('DSC_6303.jpg') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -108,19 +107,19 @@ html {
 
         /* Content Sections */
         .content-section {
-    padding: 100px 20px 80px 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    scroll-margin-top: 70px; /* Adjust this to match your header's actual height */
-}
+            padding: 100px 20px 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            scroll-margin-top: 70px;
+        }
 
         .grey-bg {
             background-color: #f9f9f9;
             max-width: 100%;
         }
         
-        .grey-bg .resume-container {
+        .grey-bg .resume-container, .grey-bg .projects-container {
             max-width: 900px;
             margin: 0 auto;
         }
@@ -147,8 +146,23 @@ html {
             margin: 0 auto;
         }
 
-        /* Resume Items */
-        .resume-container {
+        .about-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .about-images img {
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Resume & Project Items */
+        .resume-container, .projects-container {
             text-align: left;
             margin-top: 20px;
         }
@@ -180,6 +194,14 @@ html {
             margin-bottom: 10px;
         }
 
+        .resume-item img {
+            max-height: 350px;
+            display: block;
+            margin: 20px auto 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
         /* Contact Details */
         .contact-container a {
             color: #0076df;
@@ -200,21 +222,28 @@ html {
             font-size: 14px;
         }
 
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .nav-links li {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+        @media (max-width: 768px) {
+            .about-images {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
 
-    .hero-content h1 {
-        font-size: 36px;
-    }
-}
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-links li {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -225,6 +254,7 @@ html {
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -233,8 +263,8 @@ html {
 
     <section id="home" class="hero-section">
         <div class="hero-content">
-            <h1>Hi</h1>
-            <p>This is my personal website. Here you'll find ways to contact me, what I do, and other things about myself.</p>
+            <h1>Hi, I'm Caeden Cataldo</h1>
+            <p>Welcome to my personal website!</p>
             <a href="#about" class="btn">Learn More</a>
         </div>
     </section>
@@ -243,43 +273,62 @@ html {
         <h2>About Me</h2>
         <hr class="blue-line">
         <div class="about-container">
-            <p>I'm Caeden Cataldo. I'm an artist with Italian ancestory who's passionate about building robots, balsa wood airplanes, model kits, you name it. I am also a former cadet for the Civil Air Patrol.</p>
-
-<img src="IMG_20231227_214102.jpg" alt="Encampment Photo" style="height: 350px; display: block; margin: 0 auto 30px auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-
-<img src="DSC_6303.jpg" alt="Caeden Cataldo - Proffesional" style="height: 350px; display: block; margin: 0 auto 30px auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-
-<img src="20250828_113444.jpg" alt="Caeden Cataldo" style="height: 350px; display: block; margin: 0 auto 30px auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <p>I'm an artist with Italian ancestry. I'm passionate about building robots, building balsa wood airplanes, and anything hands-on. I am also a former cadet for the Civil Air Patrol.</p>
+            
+            <div class="about-images">
+                <img src="IMG_20231227_214102.jpg" alt="Civil Air Patrol Encampment Photo">
+                <img src="20250828_113444.jpg" alt="Caeden Cataldo">
+            </div>
         </div>
     </section>
 
-    <section id="resume" class="content-section grey-bg">
-    <div class="resume-container">      
-        <h2 style="text-align: center;">Resume</h2>
-        <hr class="blue-line">
-        
-        <div class="resume-item">
-            <h3>Education</h3>
-            <h4>Payson High/Jr School</h4>
-            <p class="date">August 2023 - May 2027</p>
-            <p>I was a member of the Technology Student Association from 9-12 grade, and the president of my chapter 9th grade. I also played for the tennis team 8-9 grade. I am a 4.0 student.</p>
+    <section id="projects" class="content-section grey-bg">
+        <div class="projects-container">
+            <h2 style="text-align: center;">Projects & Hobbies</h2>
+            <hr class="blue-line">
+            
+            <div class="resume-item">
+                <h3>Art</h3>
+                <p>Coming soon...</p>
+            </div>
 
-<img src="IMG_20240318_170428.jpg" alt="Caeden Cataldo - TSA Leadership" style="height: 350px; display: block; margin: 0 auto 30px auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<div class="resume-item">
+                <h3>Robotics</h3>
+                <p>Coming soon...</p>
+            </div>
         </div>
+    </section>
 
-    </div>
-</section>
+    <section id="resume" class="content-section">
+        <div class="resume-container">      
+            <h2 style="text-align: center;">Resume</h2>
+            <hr class="blue-line">
+            
+            <div class="resume-item">
+                <h3>Education</h3>
+                <h4>Payson High School / Junior High</h4>
+                <p class="date">August 2022 - May 2027</p>
+                <p>I somehow balanced having a 4.0 GPA while staying heavily active in the Technology Student Association, in which I was the president of my chapter in 9th grade.</p>
+                
+                <h4 style="margin-top: 15px;">Activities & Leadership</h4>
+                <p>• <strong>Technology Student Association (TSA):</strong> Member (Grades 9-12), Chapter President (Grade 9)</p>
+                <p>• <strong>Athletics:</strong> Payson Tennis Team Member (Grades 8-9)</p>
+                
+                <img src="IMG_20240318_170428.jpg" alt="Caeden Cataldo - TSA Leadership">
+            </div>
+        </div>
+    </section>
 
-    <section id="contact" class="content-section">
+    <section id="contact" class="content-section grey-bg">
         <h2>Contact</h2>
         <hr class="blue-line">
         <div class="contact-container">
-            <p>Email: <a href="mailto:caeden.cataldo@gmail.com">caeden.cataldo@gmail.com</a></p>
+            <p style="margin-top: 15px;">Email: <a href="mailto:caeden.cataldo@gmail.com">caeden.cataldo@gmail.com</a></p>
         </div>
     </section>
 
     <footer>
-        <p>Website created by Sam Turner.</p>
+        <p>Website designed and coded by Sam Turner.</p>
     </footer>
 
 </body>
