@@ -4,7 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caeden Cataldo - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0076df;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0076df;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 118, 223, 0.1), rgba(0, 118, 223, 0.05)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #0076df;
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056a3;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 100px 20px 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .grey-bg {
+            background-color: #f9f9f9;
+            max-width: 100%;
+        }
+        
+        .grey-bg .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .blue-line {
+            width: 60px;
+            height: 4px;
+            background-color: #0076df;
+            border: none;
+            margin: 0 auto 30px auto;
+            border-radius: 2px;
+        }
+
+        .about-container, .contact-container {
+            font-size: 18px;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Resume Items */
+        .resume-container {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .resume-item {
+            background: #fff;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .resume-item h3 {
+            color: #0076df;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .resume-item h4 {
+            color: #444;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .resume-item .date {
+            font-style: italic;
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Details */
+        .contact-container a {
+            color: #0076df;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-container a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 
@@ -59,8 +249,7 @@
         <h2>Contact</h2>
         <hr class="blue-line">
         <div class="contact-container">
-            <p>Feel free to reach out via email or connect on social media!</p>
-            <p>Email: <a href="mailto:example@email.com">example@email.com</a></p>
+            <p>Email: caeden.cataldo@gmail.com<a href="mailto:caeden.cataldo@gmail.com">example@email.com</a></p>
         </div>
     </section>
 
